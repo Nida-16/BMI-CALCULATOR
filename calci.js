@@ -28,16 +28,16 @@ btn.addEventListener('click',function () {
     if(bmi<18.5){
         Category.innerHTML = "Underweight"
     }
-    else if (18.5<=bmi<=24.9 ){
+    else if (18.5<=bmi && bmi<=24.9 ){
         Category.innerHTML = "Normal Weight"
     }
-    else if (25<=bmi<29.9 ){
+    else if (25<=bmi && bmi<=29.9 ){
         Category.innerHTML = " Pre Obesity"
     }
-    else if (30<=bmi<34.9 ){
+    else if (30<=bmi && bmi<=34.9 ){
         Category.innerHTML = "Obesity Class I"
     }
-    else if (35<=bmi<39.9){
+    else if (35<=bmi && bmi<=39.9){
         Category.innerHTML = "Obesity Class II"
     }
     else{
@@ -45,6 +45,8 @@ btn.addEventListener('click',function () {
     }
 
     BMI.innerHTML = bmi.toFixed(1)
+    
+
 
 
 
