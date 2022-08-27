@@ -20,8 +20,32 @@ btn.addEventListener('click',function () {
     }
     weight = Number(weight)
     height = Number(height)
-    let calc = weight/(height*height/10000)
+    let bmi = weight/(height*height/10000)
+
     let BMI = document.getElementById("bmi")
-    BMI.innerHTML = calc.toFixed(1)
+    let Category = document.getElementById("category")
+
+    if(bmi<18.5){
+        Category.innerHTML = "Underweight"
+    }
+    else if (18.5<=bmi<=24.9 ){
+        Category.innerHTML = "Normal Weight"
+    }
+    else if (25<=bmi<29.9 ){
+        Category.innerHTML = " Pre Obesity"
+    }
+    else if (30<=bmi<34.9 ){
+        Category.innerHTML = "Obesity Class I"
+    }
+    else if (35<=bmi<39.9){
+        Category.innerHTML = "Obesity Class II"
+    }
+    else{
+        Category.innerHTML = "Obesity Class III"
+    }
+
+    BMI.innerHTML = bmi.toFixed(1)
+
+
 
 })
